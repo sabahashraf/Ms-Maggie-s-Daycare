@@ -6,7 +6,8 @@ import auth from "../../../firebase.init";
 import logo from "../../../images/daycareLogo.png";
 import "./header.css";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import CustomLink from "../CustomLink/CustomLink";
+import { BeakerIcon } from "@heroicons/react/solid";
 const Header = () => {
   const [user] = useAuthState(auth);
   return (
@@ -18,19 +19,22 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/about">
+          <Nav className="me-auto fw-medium fs-5">
+            <Nav.Link as={CustomLink} to="/about">
               About
             </Nav.Link>
-            <Nav.Link as={Link} to="home#services">
+            <Nav.Link as={CustomLink} to="home#services">
               Services
             </Nav.Link>
-            <Nav.Link as={Link} to="/blogs">
+            <Nav.Link as={CustomLink} to="/blogs">
               Blogs
             </Nav.Link>
           </Nav>
-          <Nav>
-            <Nav.Link as={Link} to="/signup">
+          <Nav className=" fw-medium fs-5">
+            <Nav.Link as={CustomLink} to="/service/:serviceId">
+              Checkout
+            </Nav.Link>
+            <Nav.Link as={CustomLink} to="/signup">
               Sign Up
             </Nav.Link>
             {user && (

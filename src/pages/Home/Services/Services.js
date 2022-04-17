@@ -11,7 +11,7 @@ const services = [
     title: "Long Day Care",
     img: longCare,
     description:
-      "This service allows your kids to spent upto 8 hours in the daycare.",
+      "This service allows your kids to spent upto 8 hours in the daycare starting from 9am in the morning ",
     price: 80,
   },
   {

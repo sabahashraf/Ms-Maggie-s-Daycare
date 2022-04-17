@@ -3,7 +3,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../images/daycareLogo.png";
 import GoogleLogIn from "../../Shared/GoogleLogIn/GoogleLogIn";
 import "./Login.css";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
@@ -117,10 +120,7 @@ const Login = () => {
           </Link>
         </small>
       </p>
-      <div
-        className="text-center"
-        style={{ color: "color:rgb(186, 56, 186);" }}
-      >
+      <div className="text-center" style={{ color: "rgb(186, 56, 186)" }}>
         {" "}
         <button
           onClick={resetPassword}

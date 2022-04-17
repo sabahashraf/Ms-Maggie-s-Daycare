@@ -9,8 +9,8 @@ const Service = ({ service }) => {
     navigate(`/service/${id}`);
   };
   return (
-    <div className="g-3 col-lg-4 col-md-3 col-sm-12 mb-5">
-      <Card style={{ width: "18rem", height: "450px" }}>
+    <div className="g-3 col-lg-4 col-md-3 col-sm-12 mb-5 position-relative">
+      <Card className="" style={{ width: "18rem", height: "450px" }}>
         <Card.Img
           variant="top"
           src={img}
@@ -21,8 +21,12 @@ const Service = ({ service }) => {
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
           <Card.Title>Price:${price}/day</Card.Title>
-          <button onClick={() => navigateTocheckout(id)} className="nav-btn">
-            Book{" "}
+          <button
+            onClick={() => navigateTocheckout(id)}
+            className="nav-btn position-absolute "
+            style={{ bottom: "10px", right: "12px" }}
+          >
+            Book it!{" "}
           </button>
         </Card.Body>
       </Card>
