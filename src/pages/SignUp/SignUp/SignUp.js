@@ -9,7 +9,7 @@ import Loading from "../../Shared/Loading/Loading";
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [userinfo, setUserinfo] = useState({
     name: "",
     email: "",
@@ -86,7 +86,7 @@ const SignUp = () => {
           required
         />
         {errors?.email && (
-          <p className="text-danger">
+          <p className="text-danger text-center">
             <small>{errors.email}</small>
           </p>
         )}
@@ -99,7 +99,7 @@ const SignUp = () => {
           required
         />
         {errors?.password && (
-          <p className="text-danger">
+          <p className="text-danger text-center">
             <small>{errors.password}</small>
           </p>
         )}
@@ -121,7 +121,7 @@ const SignUp = () => {
         <input id="signUpBtn" type="submit" value="Sign Up"></input>
       </form>
       {error && (
-        <p className="danger">
+        <p className="text-danger text-center">
           <small>{error.message}</small>
         </p>
       )}
