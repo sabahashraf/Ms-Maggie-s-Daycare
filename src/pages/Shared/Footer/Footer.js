@@ -2,10 +2,16 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
-    <div>
-      <h2>this is footer</h2>
-    </div>
+    <footer className="text-center">
+      <p>
+        <small className=" footer">
+          &copy;{year} Ms.Maggie's Home Daycare.All Rights Reserved
+        </small>
+      </p>
+    </footer>
   );
 };
 

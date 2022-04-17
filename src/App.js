@@ -5,17 +5,18 @@ import Blogs from "./pages/Blogs/Blogs/Blogs";
 import Home from "./pages/Home/Home/Home";
 import NotFound from "./pages/NotFound/NotFound/NotFound";
 import Footer from "./pages/Shared/Footer/Footer";
-import Navbar from "./pages/Shared/Navbar/Navbar";
+
 import Login from "./pages/SignUp/Login/Login";
 import SignUp from "./pages/SignUp/SignUp/SignUp";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./pages/Shared/Header/Header";
 
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
+      <Header></Header>
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>

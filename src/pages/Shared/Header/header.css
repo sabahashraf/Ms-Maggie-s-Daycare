@@ -1,0 +1,22 @@
+#transparent{
+    background-color: transparent;
+}
+.nav-btn {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color:rgb(186, 56, 186);
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 100px;
+    
+    font-weight: 700;
+    font-size:large;
+  }
+  
+  .nav-btn:hover {
+    background-color:rgb(186, 56, 186);;
+    color: white;
+  }
