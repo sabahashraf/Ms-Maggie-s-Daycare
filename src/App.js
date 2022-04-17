@@ -11,6 +11,7 @@ import SignUp from "./pages/SignUp/SignUp/SignUp";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/Shared/Header/Header";
 import Checkout from "./pages/Checkout/Checkout/Checkout";
+import RequireAuth from "./pages/Shared/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -23,7 +24,11 @@ function App() {
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
           path="/service/:serviceId"
-          element={<Checkout></Checkout>}
+          element={
+            <RequireAuth>
+              <Checkout></Checkout>
+            </RequireAuth>
+          }
         ></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>

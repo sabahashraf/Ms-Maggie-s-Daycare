@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SignUp.css";
 import logo from "../../../images/daycareLogo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import GoogleLogIn from "../../Shared/GoogleLogIn/GoogleLogIn";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
@@ -10,6 +10,15 @@ import Loading from "../../Shared/Loading/Loading";
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [user]);
   const [userinfo, setUserinfo] = useState({
     name: "",
     email: "",
@@ -63,6 +72,7 @@ const SignUp = () => {
     console.log(userinfo);
     createUserWithEmailAndPassword(userinfo.email, userinfo.password);
   };
+
   return (
     <div className="container">
       <div className="text-center my-5">

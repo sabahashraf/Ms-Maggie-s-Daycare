@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../images/daycareLogo.png";
 import GoogleLogIn from "../../Shared/GoogleLogIn/GoogleLogIn";
 import "./Login.css";
@@ -23,6 +23,14 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [user]);
   if (loading) {
     return <Loading></Loading>;
   }
@@ -51,6 +59,7 @@ const Login = () => {
     event.preventDefault();
     signInWithEmailAndPassword(userinfo.email, userinfo.password);
   };
+
   const resetPassword = async () => {
     if (userinfo.email) {
       await sendPasswordResetEmail(userinfo.email);
@@ -59,6 +68,7 @@ const Login = () => {
       toast("please enter your email address");
     }
   };
+
   return (
     <div className="container">
       <div className="text-center my-5">
