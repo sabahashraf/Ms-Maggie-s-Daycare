@@ -10,6 +10,7 @@ import Login from "./pages/SignUp/Login/Login";
 import SignUp from "./pages/SignUp/SignUp/SignUp";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/Shared/Header/Header";
+import Checkout from "./pages/Checkout/Checkout/Checkout";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route
+          path="/service/:serviceId"
+          element={<Checkout></Checkout>}
+        ></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>

@@ -1,0 +1,27 @@
+form input:not([type='checkbox']){
+    display:block;
+    padding:10px 20px;
+    border-radius: 5px;
+    margin:0 auto;
+    margin-bottom: 20px;
+    align-items: center;
+    width:30%;
+    background-color: #F8F8F8;
+    font-size:14px;
+    border:none;
+}
+.check-container{
+    width:30%;
+    margin:0 auto; margin-bottom: 10px;
+}
+#signUpBtn{
+    background-color:rgb(186, 56, 186);
+    color:white;
+    cursor:pointer;
+}
+
+#signUpBtn:hover{
+    background-color: #ddd;
+    color:rgb(186, 56, 186);
+    font-weight:bold;
+}
