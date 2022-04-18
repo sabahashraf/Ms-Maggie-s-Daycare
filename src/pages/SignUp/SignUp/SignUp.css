@@ -10,10 +10,32 @@ form input:not([type='checkbox']){
     font-size:14px;
     border:none;
 }
+
+    
+  
+  @media only screen and (max-width: 992px) {
+    form input:not([type='checkbox']){
+        width:90%;
+
+    }
+    
+  }
+
 .check-container{
     width:30%;
     margin:0 auto; margin-bottom: 10px;
 }
+@media only screen and (max-width: 992px) {
+
+    .check-container{
+        width:90%;
+        margin:0 auto; margin-bottom: 10px;
+    }
+    
+
+    }
+    
+  
 #signUpBtn{
     background-color:rgb(186, 56, 186);
     color:white;

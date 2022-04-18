@@ -30,6 +30,11 @@
     font-weight:400;
     font-size:large;
   }
+  @media only screen and (max-width: 600px) {
+    .hero-btn {
+    width:100%;
+    }
+  }
   
   .hero-btn:hover {
     background-color:rgb(186, 56, 186);;

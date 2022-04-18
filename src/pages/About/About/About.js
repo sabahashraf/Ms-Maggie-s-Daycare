@@ -4,15 +4,15 @@ import person from "../../../images/person.png";
 
 const About = () => {
   return (
-    <section className="container about d-flex my-5 justify-content-center align-items-center ">
-      <div className="order-2 me-5">
-        <img className="person order-2" src={person} alt="" />
+    <section className="container about d-flex my-5 justify-content-center align-items-center flex-column flex-lg-row">
+      <div className="order-md-2 order-1 me-md-5 mb-5">
+        <img className="person order-lg-2 order-1" src={person} alt="" />
       </div>
       <div
-        className="order-1 pe-5
-      w-50"
+        className="order-lg-1 order-2 pe-md-5 px-sm-3
+      w-md-50"
       >
-        <h2 className="text-purple mb-5">It's about me...</h2>
+        <h2 className="text-purple mb-5 ">It's about me...</h2>
         <p className="fs-5 ">
           I'm Sabah.I had done bachelor of science in elctrical and electronics
           engineering.While I was completing my degree I was introduced with C
