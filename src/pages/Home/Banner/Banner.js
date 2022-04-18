@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="hero-text">
           <h1>
             <span className="d-block mb-2 text-purple">
-              Ms.Maggie's Daycare
+              Ms. Maggie's Daycare
             </span>
             <span className="d-block mb-2">A warm and loving environment</span>
             <span className="d-block mb-5">For your Child</span>
