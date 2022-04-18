@@ -34,7 +34,6 @@ const SignUp = () => {
   }
   const handleNameOnBlur = (event) => {
     setUserinfo({ ...userinfo, name: event.target.value });
-    console.log(userinfo);
   };
   const handleEmailOnBlur = (event) => {
     const emailRegex = /\S+@\S+\.\S+/;
@@ -46,7 +45,6 @@ const SignUp = () => {
       setUserinfo({ ...userinfo, email: "" });
       setErrors({ ...errors, email: "invalid email" });
     }
-    console.log(userinfo);
   };
   const handlePasswordOnBlur = (event) => {
     const passwordRegex = /.{6,}/;
@@ -55,7 +53,6 @@ const SignUp = () => {
       setUserinfo({ ...userinfo, password: event.target.value });
       setErrors({ ...errors, password: "" });
     }
-    console.log(userinfo);
   };
   const handleConfirmPasswordOnBlur = (event) => {
     if (event.target.value === userinfo.password) {
@@ -65,7 +62,6 @@ const SignUp = () => {
       setErrors({ ...errors, password: "Password doesn't match" });
       setUserinfo({ ...userinfo, confirmPassword: "" });
     }
-    console.log(userinfo);
   };
   const handleSignUp = (event) => {
     event.preventDefault();
