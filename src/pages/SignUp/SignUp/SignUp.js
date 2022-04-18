@@ -74,7 +74,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container min-vh-100">
       <div className="text-center my-5">
         <img src={logo} alt=""></img>
       </div>

@@ -4,7 +4,7 @@ import person from "../../../images/person.png";
 
 const About = () => {
   return (
-    <section className="container about d-flex my-5 justify-content-center align-items-center flex-column flex-lg-row">
+    <section className="container about d-flex my-5 justify-content-center align-items-center flex-column flex-lg-row min-vh-100">
       <div className="order-md-2 order-1 me-md-5 mb-5">
         <img className="person order-lg-2 order-1" src={person} alt="" />
       </div>

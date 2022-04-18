@@ -10,7 +10,10 @@ const Service = ({ service }) => {
   };
   return (
     <div className="g-md-3 col-lg-4 col-md-3 col-sm-12 mb-5 position-relative ">
-      <Card className="mx-auto" style={{ width: "18rem", height: "450px" }}>
+      <Card
+        className="mx-auto border-0 shadow"
+        style={{ width: "18rem", height: "450px" }}
+      >
         <Card.Img
           variant="top"
           src={img}

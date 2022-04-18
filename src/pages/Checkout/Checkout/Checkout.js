@@ -10,7 +10,7 @@ const Checkout = () => {
     toast("Thank you for the booking");
   };
   return (
-    <div>
+    <div className="container min-vh-100">
       <h2 className="text-center text-purple my-5">Confirm Your Booking</h2>
       <form onSubmit={handleCheckOut}>
         <input type="text" name="name" id="" placeholder="Your name" required />

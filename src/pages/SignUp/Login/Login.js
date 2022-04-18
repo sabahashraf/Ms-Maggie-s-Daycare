@@ -3,10 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../images/daycareLogo.png";
 import GoogleLogIn from "../../Shared/GoogleLogIn/GoogleLogIn";
 import "./Login.css";
-import {
-  useSignInWithEmailAndPassword,
-  useSignInWithGoogle,
-} from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
@@ -73,7 +70,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container min-vh-100">
       <div className="text-center my-5">
         <img src={logo} alt=""></img>
       </div>
